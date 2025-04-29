@@ -23,7 +23,7 @@
             $registerd = 1;
         }
     }
-    mysqli_close($conn);
+    
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +31,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/indexStyle.css">
+    <link rel="stylesheet" href="CSS/registerStyle.css">
     <title>Registrer</title>
 </head>
 <body> 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="register-form">
+        <?php if($error001){echo "Error: 001 Could not connect to<br>";}?>
         <h2>Registrering</h2>
         <p>Du må registrere deg for å bruke nettsiden ; )</p>
         <section class="register-field">
@@ -51,11 +52,13 @@
             </div>
 
             <button type="submit" value="Register">Registrer deg</button><br>
-
             <?php if($registerd){echo "Du er nå registrert! <br>"; echo "<p>Trykk <a href='login.php'>Her</a> for å logge inn</p>";}?>
-            <?php if($error001){echo "Error: 001 <br>Could not Connect <br>"}?>
+            
 
         </section>
     </form>
 </body>
 </html>
+<?php
+    mysqli_close($conn);
+?>
