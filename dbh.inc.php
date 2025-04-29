@@ -6,14 +6,12 @@
     $db_name = "minsidedb";
     $conn = "";
 
+    $error001 = false;
     try{
         $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
     }
     catch(mysqli_sql_exception){
-        echo "Error: 001 <br>Could not Connect <br>";
+        $error001 = true;
     }
-    
-    if($conn){
-        echo "You are Connected! <br>";
-    }
+
 ?>
