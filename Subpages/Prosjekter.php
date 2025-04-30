@@ -20,10 +20,11 @@
 </head>
 <body>
 <!-- Header section with title -->
-<section class="header">
-    <div class="header-box">
-         <div class="header-content">
-             <h1>Prosjekter jeg har jobbet med!</h1>
+<section class="head">
+    <div class="container">
+         <div class="head-content">
+             <p>Prosjekter</p>
+             <h1>Ting jeg har jobbet med</h1>
         </div>
     </div>
 </section>
@@ -33,7 +34,7 @@
     <div class="Project-box">
         <div class="Project-content">
             <div class="picture">
-                <a href="../home.html" target="_blank"><img src="../pictures/Min Side SS.png" alt="Screenshot of Website"></a>
+                <a href="../home.php" target="_blank"><img src="../pictures/Min Side SS.png" alt="Screenshot of Website"></a>
             </div>  
             <h1>Min Side</h1>
             <p>Siden du er på nå! Det er prosjektet vi jobber med i Konseptutvikling og Programmering med Bent</p>
@@ -54,7 +55,7 @@
     <!-- Project 3: Photo Series -->
     <div class="Project-box">
         <div class="Project-content">
-            <a href="FotoSerie.html"><img src="../picture/Fotoserie/IMG_1068.jpg" alt="Screenshot of Website"></a>
+            <a href="FotoSerie.php"><img src="../picture/Fotoserie/IMG_1068.jpg" alt="Screenshot of Website"></a>
             <h1>Foto Serie</h1>
             <p>Oppgave jeg hadde i historiefortelling</p>
         </div>
@@ -66,7 +67,7 @@
 <section class="Prosjekt-Bottom">
     <div class="Project-box">
         <div class="Project-content">
-            <a href="../Skjema Side/index.html"><img src="../pictures/Tverfagelig.png" alt="Empty"></a>
+            <a href="../TverfageligProsjekt/index.html"><img src="../pictures/Tverfagelig.png" alt="Empty"></a>
             <h1>Tverfagelig Prosjekt</h1>
             <p>Side om kildesortering</p>
         </div>
@@ -91,28 +92,7 @@
     </div>
 </section>
 -->
-<!-- Website Outline Comparison Section -->
-<section class="outline-section">
-    <div class="outline-box">
-        <div class="outline-content">
-            <h1>Nettside Planlegging</h1>
-            <div class="outline-image">
-                <img src="Bilder/Skisse_2.png" alt="Original Website Outline">
-            </div>
-        </div>
-    </div>
+
 </section>
-
-<!-- Footer section with image credits -->
-<footer>
-    <section class="Footer-box">
-        <div class="Footer-content">
-            <ul>
-                <li>Image by&nbsp;<span class="flatart-link"><a href="https://www.freepik.com/author/freepik" target=_blank>freepik</a></span></li>
-            </ul>
-        </div>
-    </section>
-</footer>
-
 </body>
 </html>

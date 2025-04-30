@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Avfallshåndtering</title>
+	<link rel="stylesheet" href="CSS/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<header>
+    	<h1>Avfallshåndtering</h1>
+    	<p>Hold oversikt over ditt daglige avfall og test kunnskapen din!</p>
+	</header>
+    
+	<main>
+    	<!-- Ny skriftlig del: Problemstilling -->
+    	<section id="problemstilling">
+        	<h2>Problemstilling</h2>
+        	<p>Hvordan kan vi forbedre kildesorteringen i Norge for å redusere avfall og øke bærekraft?</p>
+    	</section>
+
+	<!-- Skrevet del -->
+    <section>
+        <h2>Hvordan kildesorterer man?</h2>
+        <p>Kilder til hvordan man skal kildesortere, samt svarene som ble samlet inn:</p>
+        <ul>
+            <li>Kaster alt i samme bosspan - 10 svar (37%)</li>
+            <li>Sorterer avfall i forskjellige søppelspan - 9 svar (33.3%)</li>
+            <li>Sorterer kildene sine alfabetisk - 2 svar (7.4%)</li>
+            <li>Spise - 6 svar (22.2%)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Er det viktig å kildesortere?</h2>
+        <ul>
+            <li>Ja - 3 svar (11.1%)</li>
+            <li>Ja, Selvfølgelig - 6 svar (22.2%)</li>
+            <li>100% Nei - 12 svar (44.4%)</li>
+            <li>Egentlig ikke - 6 svar (22.2%)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Hvor viktig er det å kildesortere? (fra 1 til 7 stjerner)</h2>
+        <ul>
+            <li>1 stjerne - 13 svar (48.1%)</li>
+            <li>2 stjerner - 2 svar (7.4%)</li>
+            <li>3 stjerner - 1 svar (3.7%)</li>
+            <li>4 stjerner - 1 svar (3.7%)</li>
+            <li>5 stjerner - 2 svar (7.4%)</li>
+            <li>6 stjerner - 1 svar (3.7%)</li>
+            <li>7 stjerner - 7 svar (25.9%)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Kildesorterer du?</h2>
+        <ul>
+            <li>Ja - 7 svar (25.7%)</li>
+            <li>Nei - 12 svar (44.4%)</li>
+            <li>Ikke hjemme, men gjør på skolen eller andre steder hvis de har slike kildesorterings systemer - 4 svar (14.8%)</li>
+            <li>Kildesorterer noen ting men ikke alle - 4 svar (14.8%)</li>
+        </ul>
+    </section>
+
+    	<!-- Ny skriftlig del: Konklusjon -->
+    	<section id="konklusjon">
+        	<h2>Konklusjon</h2>
+        	<p>Undersøkelsen viser at mange fortsatt ikke sorterer avfallet sitt på en bærekraftig måte. Det er behov for bedre opplæring og insentiver for å øke kildesortering blant befolkningen.</p>
+    	</section>
+
+        <section id="letter-to-prime-minister">
+			<h2>Letter to the Prime Minister</h2>
+			<h3>Dear Prime Minister Jonas Gahr Støre,</h3>
+			<p>I am writing to urge you to take stronger action in improving the way we handle waste and recycling in Norway. While progress has been made, a significant portion of waste continues to go to landfills, which could be recycled or composted instead.</p>
+            <p>Despite awareness campaigns, many people still struggle with properly sorting their waste, and contamination of recyclable materials remains a significant issue. There is also a lack of consistent waste sorting infrastructure in public spaces, residential areas, and businesses. I strongly believe that improving recycling systems and making it easier for citizens to sort their waste will reduce contamination and increase recycling rates.</p>
+            <p>Public education is a key factor in solving this issue. Many people are still unsure of what materials can be recycled, especially when it comes to hazardous waste. Expanding education and outreach, particularly through schools and community programs, could help foster better waste sorting habits.</p>
+            <p>Another concern is food waste. Nearly a third of food produced globally is wasted, and Norway is no exception. Encouraging households and businesses to compost more effectively and reduce food waste would significantly reduce our environmental impact and promote sustainable practices.</p>
+            <p>I also suggest promoting advancements in recycling technologies. By investing in more efficient recycling methods, Norway could become a global leader in sustainability, reducing the need for new raw materials and minimizing waste.</p>
+            <p>Thank you for your time and consideration. I trust you will give this important issue the attention it deserves.</p>
+            <p>Yours truley, Viggo.</p>
+		</section>
+
+    	<!-- Muntlig del -->
+    	<section id="lydopptak">
+        	<h2>Muntlig del</h2>
+        	<p>Ikke ferdig, womp womp</p>
+        	<audio controls>
+            	<source src="audio/presentasjon.mp3" type="audio/mpeg">
+            	Nettleseren din støtter ikke denne lydspilleren.
+        	</audio>
+    	</section>
+
+    	<!-- Interaktive deler: Daglig avfall -->
+    	<section id="table-section">
+        	<h2>Daglig avfall (kg)</h2>
+        	<form id="data-form">
+            	<label for="day">Dag:</label>
+            	<select id="day" required>
+                	<option value="Mandag">Mandag</option>
+                	<option value="Tirsdag">Tirsdag</option>
+                	<option value="Onsdag">Onsdag</option>
+                	<option value="Torsdag">Torsdag</option>
+                	<option value="Fredag">Fredag</option>
+                	<option value="Lørdag">Lørdag</option>
+                	<option value="Søndag">Søndag</option>
+            	</select>
+
+            	<label for="weight">Avfall (kg):</label>
+            	<input type="number" id="weight" min="0" step="0.1" required>
+
+            	<button type="submit">Legg til</button>
+        	</form>
+
+        	<table id="data-table">
+            	<thead>
+                	<tr>
+                    	<th>Dag</th>
+                    	<th>Avfall (kg)</th>
+                	</tr>
+            	</thead>
+            	<tbody>
+            	</tbody>
+        	</table>
+
+        	<canvas id="chart" width="400" height="200"></canvas>
+    	</section>
+
+    	<!-- Interaktive deler: Quiz -->
+    	<section id="quiz-section">
+        	<h2>Sorteringsquiz</h2>
+        	<p>Hvor skal disse tingene sorteres?</p>
+        	<div id="quiz-container">
+            	<p id="question-counter">Spørsmål 1 av 8</p>
+            	<p id="question"></p>
+            	<button class="quiz-btn" data-answer="Restavfall">Restavfall</button>
+            	<button class="quiz-btn" data-answer="Papir">Papir</button>
+            	<button class="quiz-btn" data-answer="Plast">Plast</button>
+            	<button class="quiz-btn" data-answer="Glass">Glass</button>
+            	<button class="quiz-btn" data-answer="Farlig Avfall">Farlig Avfall</button>
+            	<button class="quiz-btn" data-answer="Metal">Metal</button>
+            	<button class="quiz-btn" data-answer="Elektrisk avfall">Elektrisk Avfall</button>
+            	<p id="quiz-feedback"></p>
+        	</div>
+    	</section>
+	</main>
+
+	<script src="JavaScript/JS.js"></script>
+	<p id="ip-address"></p>
+</body>
+</html>
