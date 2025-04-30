@@ -1,6 +1,6 @@
 <?php
-  include("dbh.inc.php");
-  include("include/navBar.html");
+  include("../dbh.inc.php");
+  include("../include/navBar.html");
   session_start();
   if(empty($_SESSION["activeSes"])){
     header("location: login.php");
@@ -17,26 +17,8 @@
     <link rel="stylesheet" href="../CSS/nav-bar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
-<body><!--Nav Bar-->
-    <nav>
-        <ul>
-            <li><a href="../home.html">Hjem</a></li>
-            <li><a href="Prosjekter.html">Prosjekter</a></li>
-            <li><a href="#">Om</a></li>
-            <li><a href="JavaScript_feat_Bent.html">JavaScript</a></li>
-            <li><a href="log.html">Logg</a></li>
-            <li><a href="#">Ressurser/Hjelp</a> 
-                <ul class="dropdown">
-                    <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></li>
-                    <li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">freeCodeCamp</a></li>
-                    <li><a href="https://www.youtube.com/@coding2go" target="_blank">Coding2Go</a></li>
-                    <li><a href="bent.html">Bent</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-
+<body>
+    
 <section class="about">
     <div class="about-con">
         <div class="about-text">
