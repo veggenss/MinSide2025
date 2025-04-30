@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(30, 35, 42) 0%, rgb(30, 40, 56) 50%, rgb(30, 45, 74) 100%);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.Video-Center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    
+
+}
+iframe{
+    width: 80vw;
+    height: 100vh;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.bilde-serie{
+    display: flex;
+    margin-top: 100px;
+    background-color: rgba(255, 64, 0, 0.8);
+    flex-wrap: wrap;
+    width: 75vw;
+    border-radius: 3px;
+    justify-content: center;
+
+}  
+
+.bilde-align{
+    display: flex;
+    justify-content: center;
+}
+.bilde-con img{
+    margin-top: 50px;
+    margin: 20px;
+    max-width: 25vw;
+    max-height: 100%;
+    border: 1px solid orange;
+    
+}

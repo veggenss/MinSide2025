@@ -1,0 +1,242 @@
+/* Reset default browser styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Main body styling with background image */
+body{
+    min-height: 100vh;
+    background-image: url(../pictures/Gradien\ Abstract\,\ Blue\ Purple.jpg);
+    background-size: cover; /* Centers and scales image to cover viewport */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 920px) {
+    /* Stack project boxes vertically on smaller screens */
+    .Prosjekt-Top{
+        flex-direction: column;
+    }
+    .Prosjekt-Bottom{
+        flex-direction: column;
+    }
+}
+
+/* Header section styling */
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* Glassmorphism effect for header box */
+.header-box{
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.08));
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    width: 800px;
+    height: 120px;
+}
+
+
+
+
+/* Header content alignment and styling */
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: white;
+    font-size: 1.8rem;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Project section layout containers */
+.Prosjekt-Top, .Prosjekt-Bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Individual project box styling */
+.Project-box{
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.058);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(8px);
+    height: 500px;
+    width: 450px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.Project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Project-box:active {
+    transform: translateY(2px);
+}
+
+/* Project content container styling */
+.Project-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Project image styling with blur effect */
+.Project-content img{
+    display: inline-block;  
+    margin: 20px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 1px;
+    transition: filter 0.5s ease; /* Smooth transition for blur effect */
+    filter: blur(2px); 
+}
+
+/* Remove blur effect on hover */
+.Project-content :hover{
+    filter: blur(0px);
+}
+
+/* Utility class for z-index positioning */
+.Project-box.z-index-low{
+    z-index: -1;
+}
+
+/* Footer positioning and styling */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 12px;
+    padding: 10px;
+    z-index: 5; /* Ensures footer stays above other content */
+}
+
+/* Footer link styling */
+.flatart-link a{
+    color: turquoise;
+}
+
+/* Footer list item styling */
+footer li{
+    color: white;
+    display: flex;
+    margin-right: auto;
+    text-decoration: underline;
+}
+
+/* Outline section styling */
+.outline-section {
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+    margin-bottom: 100px; /* Space for footer */
+}
+
+.outline-box {
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.058);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.09);
+    backdrop-filter: blur(8px);
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.outline-content {
+    color: white;
+    text-align: center;
+}
+
+.outline-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.outline-text {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Responsive adjustment */
+@media only screen and (max-width: 920px) {
+    .outline-section {
+        margin: 30px;
+        margin-bottom: 100px;
+    }
+    
+    .outline-box {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Responsive design adjustments */
+@media only screen and (max-width: 1400px) {
+    .Prosjekt-Top, .Prosjekt-Bottom {
+        flex-wrap: wrap;
+    }
+    
+    .Project-box {
+        width: calc(50% - 40px);
+        min-width: 380px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .header-box {
+        width: 90%;
+        margin: 0 20px;
+    }
+    
+    .header-content {
+        font-size: 1.4rem;
+    }
+    
+    .Project-box {
+        width: 100%;
+        min-width: unset;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .picture img {
+        filter: none;
+        transition: none;
+    }
+    
+    .picture img:hover {
+        filter: none;
+        transform: none;
+    }
+}
+

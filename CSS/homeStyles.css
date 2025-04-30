@@ -1,0 +1,164 @@
+/* General styles for the entire website */
+
+/* Reset default browser styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Base body styling with full viewport height */
+body{
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden; /* Prevents scrolling */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background image setup with flip effect */
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Background image with source attribution */
+    background-image: url(../pictures/AbstractBlueCircles.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(-1); /* Flips the image horizontally */
+    z-index: -1; /* Places background behind all content */
+}
+
+/* Main content container */
+.container{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 850px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Header section layout */
+.head{
+    margin-top: 90px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Main text styling in header */
+.head-content p{
+    font-weight: 550;
+    font-size: 3.4rem;
+    letter-spacing: 1px;
+    color: rgb(0, 236, 240); /* Bright cyan color */
+}
+
+/* Secondary heading styling */
+.head-content h1{
+    font-weight: 450;
+    font-size: 2.4rem;
+    letter-spacing: 0px;
+    color: rgb(23, 103, 224); /* Blue color */
+}
+
+/* Dropdown menu styling */
+nav ul li .dropdown{
+    display: none; /* Hidden by default */
+    position: absolute;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    backdrop-filter: blur(4px); /* Glassmorphism effect */
+}
+
+/* Show dropdown on hover */
+nav ul li:hover .dropdown{
+    display: block;
+}
+
+/* Dropdown list items */
+nav ul li .dropdown li{
+    padding: 3px 3px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Dropdown links */
+nav ul li .dropdown li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer positioning */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 12px;
+    padding: 10px;
+    z-index: 5;
+}
+
+/* Footer link color */
+.flatart-link a{
+    color: turquoise;
+}
+
+/* Footer list items */
+footer li{
+    color: white;
+    display: flex;
+    margin-right: auto;
+    text-decoration: underline;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust container for tablet screens */
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Center header content */
+    .head {
+        margin-top: 60px;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adjust font sizes for tablets */
+    .head-content p {
+        font-size: 2.5rem;
+    }
+
+    .head-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+    /* Smaller font sizes for mobile */
+    .head-content p {
+        font-size: 2rem;
+    }
+
+    .head-content h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust footer for mobile */
+    footer {
+        left: 5px;
+        padding: 5px;
+    }
+}
+

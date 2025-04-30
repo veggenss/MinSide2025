@@ -3,11 +3,11 @@ include("dbh.inc.php");
 
 $loginError = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $mysqli->real_escape_string($_POST['username']);
+    $username = $conn->real_escape_string($_POST['username']);
 
     // sjekker brukernavn og passord opp mot databasen
     $sql = "SELECT * FROM users WHERE username = ?";
-    $stmt = $mysqli->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -19,12 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $user['username'];
         }
 
-        header('Location: index.php');
+        header('Location: home.html');
         exit();
     } else {
         $error = "Ugyldig brukernavn eller passord";
     }
-
 ?>
 
 <!DOCTYPE html>

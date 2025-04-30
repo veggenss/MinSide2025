@@ -1,0 +1,246 @@
+/* Reset default margins and padding */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Main body styling with orange-yellow gradient background */
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, rgb(30, 35, 42) 0%, rgb(30, 35, 42) 40%, rgb(30, 40, 56) 70%, rgb(30, 45, 74) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Container for JavaScript input sections - uses flexbox for layout */
+.JS-Input {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
+}
+
+
+/* Individual box container styling */
+.box-frame {
+    width: 450px;
+    min-height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    background-color: rgb(46, 52, 59);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Box title styling */
+.box-frame h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Common styling for different box content types */
+.box-ui-content, .box-li-content, .box-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Shared styles for input fields and buttons within UI content */
+.box-ui-content input, .box-ui-content button {
+    width: 80%;
+    margin: 5px 0;
+}
+
+
+/* Input field specific styling */
+.box-ui-content input {
+    background-color: lightyellow;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    padding: 4px;
+    font-size: 1rem;    
+}
+
+
+/* Button styling within UI content */
+.box-ui-content button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgba(41, 199, 243, 0.6);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.box-li-content {
+    color: lightyellow;
+}
+
+
+/* Button hover effect */
+.box-ui-content button:hover {
+    background-color: rgba(41, 199, 243, 0.85);
+}
+
+
+
+/* Container for grouping buttons */
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+}
+
+
+
+
+
+/* RPS styles */
+.game-box {
+    background-color: rgb(46, 52, 59);
+}
+
+.game-container {
+    max-width: 100%;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+
+.score-board {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.score {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.game-status {
+    text-align: center;
+    color: white;
+    margin: 15px 0;
+}
+
+.result {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.game-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+
+.game-buttons button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.game-buttons button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.game-buttons button:active {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+.reset-btn {
+    background: rgba(231, 76, 60, 0.8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.reset-btn:hover {
+    transform: translateY(-5px);
+    background: rgba(231, 76, 60, 1);
+}
+
+.reset-btn:active {
+    transform: translateY(5px);
+}
+
+
+
+
+/* Responsive styles */
+@media screen and (min-width: 768px) {
+    .game-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .game-buttons button {
+        width: 120px;
+        height: 120px;
+        flex-direction: column;
+    }
+
+    .game-buttons i {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .game-buttons button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .game-buttons i {
+        font-size: 2.5rem;
+    }
+}

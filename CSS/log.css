@@ -1,0 +1,108 @@
+/* Global reset to ensure consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body styling with gradient background */
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, rgb(30, 35, 42) 0%, rgb(30, 35, 42) 40%, rgb(30, 40, 56) 70%, hwb(220 12% 71%) 100%);
+    color: #ffffff;
+}
+
+/* Search functionality styling */
+.search-bar {
+    margin: 20px 40px 0px 40px; 
+    text-align: center;
+}
+
+/* Container for search input and filter dropdown */
+.search-container {
+    display: flex;
+    align-items: center; /* Vertically centers search field and icon */
+    justify-content: center; /* Horizontally centers the container */
+    gap: 10px; /* Space between search field and icon */
+}
+
+/* Search input field styling */
+.search-container input {
+    width: 100%;
+    max-width: 675px; /* Limits search field width for better UX */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+/* Dropdown filter component */
+.dropdown-filter {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown select element styling */
+.dropdown-filter select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 40px;
+    font-size: 1.1rem;
+}
+
+/* Hover effect for dropdown options */
+.dropdown-filter:hover select option {
+    background-color: #f1f1f1;
+}
+
+/* Log entries container layout */
+.logs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 40px;
+}
+
+/* Individual log entry card styling */
+.log {
+    background-color: #2e343b;
+    padding: 30px;
+    border-radius: 10px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle styling within log entries */
+.log h6 {
+    margin-top: -15px;  /* Reduces space between title and subtitle */
+    margin-bottom: 15px;  /* Adds space between subtitle and content */
+    color: rgba(255, 255, 255, 0.6); /* Subtle text color for hierarchy */
+}
+
+/* Log entry title styling */
+.log h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+/* Log entry content styling */
+.log p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1300px) {
+    .log {
+        width: 95%; /* Makes logs responsive on smaller screens */
+    }
+}
+

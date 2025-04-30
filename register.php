@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ss", $username, $password);
 
     if ($stmt->execute()) {
-        header('Location: home.html');
+        header('Location: login.php');
         echo "Registrering av bruker vellykket.";
         exit();
     } else {

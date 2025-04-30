@@ -1,0 +1,114 @@
+/* Main navigation container - adds blur effect and ensures nav stays on top */
+nav{
+    padding-right: 10px;
+    backdrop-filter: blur(4px);
+    z-index: 100;
+}
+
+/* Navigation list container - creates a horizontal flex layout aligned to the right */
+nav ul{
+    width: 100%; /* Controls the full width of the navigation bar */
+    position: relative;
+    list-style: none; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Ensures proper positioning for dropdown menus */
+nav ul li{
+    position: relative;
+}
+
+/* Prevents text wrapping in navigation items */
+nav ul li a{
+    white-space: nowrap;
+}
+
+/* Sets the height of navigation items - controls overall nav bar height */
+nav li{
+    height: 70px;    
+}
+
+/* Styling for navigation links */
+nav a{
+    height: 100%;
+    padding: 0 30px; /* Horizontal spacing between nav items */
+    text-decoration: none; /* Removes default underline from links */
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/* Hover effect for navigation items */
+nav a:hover{
+    background-color: rgba(60, 138, 248, 0.751);
+    backdrop-filter: blur(4px);
+    border-radius: 3px;
+}
+
+/* Positions the first navigation item (likely a logo) to the left */
+nav li:first-child{
+    margin-right: auto; /* Pushes the first item to the left, others stay right */ 
+}
+
+/* Dropdown menu styling - hidden by default */
+nav ul li .dropdown{
+    display: none;
+    position: absolute;
+    background-color: rgba(10, 22, 59, 0.4);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    list-style: none;
+    top: 100%;
+    max-width: inherit;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+}
+
+/* Shows dropdown menu on hover */
+nav ul li:hover .dropdown{
+    display: block;
+}
+
+/* Dropdown list item styling */
+nav ul li .dropdown li{
+    padding: 3px 3px;
+    white-space: nowrap;
+    display: block;
+}
+
+/* Dropdown link styling */
+nav ul li .dropdown li a{
+    color: white;
+    text-decoration: none;
+    justify-content: flex-start;
+}
+
+/* Responsive design for screens smaller than 920px */
+@media only screen and (max-width: 920px) {
+    /* Adjusts navigation layout for smaller screens */
+    nav ul {
+        justify-content: space-evenly;
+    }
+    
+    /* Reduces padding for nav items on smaller screens */
+    nav a {
+        padding: 0px 5px;
+    }
+
+    /* Adjusts logo positioning for smaller screens */
+    nav li:first-child{
+        margin-right: 0px;
+        margin-left: 25px;
+    }
+    
+    /* Allows navigation items to wrap onto multiple lines if needed */
+    nav ul{
+        flex-wrap: wrap;
+    }
+}

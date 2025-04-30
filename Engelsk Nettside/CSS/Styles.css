@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(../Bilder/gray-texture.jpg);
+    background-size: cover; /* Fikserer bildet i midten av siden*/
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Nunito", sans-serif;
+}
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+    box-shadow: 3px 3px 3px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul{
+    width: 100%; /* Lengden på nav linjen*/
+    gap: 40px;
+    /*Flexbox shinanigans*/
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    letter-spacing: 1.5px;
+}
+
+nav li{
+    position: relative;
+    height: 74px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+nav a{
+    position: relative;
+    transition: all 0.45s ease-in-out;
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+nav img{
+    position: relative;
+    
+}
+
+nav a:hover{
+    backdrop-filter: blur(2px);
+}
+
+nav li .underline{
+    width: 100%;
+    height: 2.5px;
+    background: rgba(191, 192, 192, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+
+nav li .solid-underline{
+    width: 100%;
+    height: 2.5px;
+    background: rgba(191, 192, 192, 0.5);
+    position: relative;
+    bottom: 10px;
+}
+
+nav li:hover .underline{
+    transform: scaleX(1);
+}
+
+.startimage{
+    position: relative;
+}
+.startimage img{
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 0;
+    display: block;
+    overflow: hidden;
+
+}
+
+.hero-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    right: 60%;
+
+
+}
+
+.hero-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 4px solid rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+
+}
+
+.hero-content{
+    margin: 35px;
+    color: rgb(0, 85, 140);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.hero-content p{
+    margin: 20px;
+}
+
+.button{
+    height: 60px;
+    width: 250px;
+    border-radius: 50px;
+    background-color: rgb(52, 196, 112);
+    font-size: 1.8rem;
+    overflow: hidden;
+    letter-spacing: 1.5px;
+    border: 2px solid rgb(52, 196, 112) ;
+}
+
+.button a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+}
+
+
+#hero-button{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#hero-button a{
+    position: relative;
+    transition: all .45s ease-out;
+}
+
+#translate {
+    transform: rotate(50deg);
+    width: 100%;
+    height: 250%;
+    left: -250px;
+    top: -30px;
+    background: rgb(0, 85, 140);
+    position: absolute;
+    transition: all .3s ease-Out;
+  }
+
+  #hero-button:hover #translate {
+    left: 0;
+  }
+  
+  #hero-button:hover a {
+    color: white;
+    z-index: 1;
+  }
+
+
+

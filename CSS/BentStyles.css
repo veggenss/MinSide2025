@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(../Bilder/Benthmmm.png);
+    background-repeat: repeat;
+    background-position: center 
+}
+
+body h2{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: lightgray;
+}
+
+.container{
+    display: flex;  
+    justify-content: flex-start;
+    width: 100px;
+    height: 50px;
+    margin: 25px 40px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.container-content{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+
+.container-content a{
+    text-decoration: none;
+    color: black;
+}
