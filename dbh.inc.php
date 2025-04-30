@@ -1,11 +1,9 @@
 <?php
 
-    session_start();
-    
     $db_server = "localhost";
     $db_user = "root";
     $db_pass = "";
-    $db_name = "minsidedb";
+    $db_name = "minsidedatabase";
     $conn = "";
 
     $error001 = false;
