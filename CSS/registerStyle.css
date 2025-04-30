@@ -1,102 +1,110 @@
-/* CSS/indexStyle.css */
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7fa;
-    color: #333;
+/* Reset and Base Styling */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 40%, #1e2838 70%, #1e2d4a 100%);
+    color: #ffffff;
+    font-family: Poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    height: 100vh;
     align-items: center;
     justify-content: center;
 }
 
-.register-form {
-    background-color: #fff;
-    padding: 3rem 3.5rem;
-    border-radius: 20px;
-    border: 2px solid #d1d5db; /* tydeligere kant */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+/* Main Container */
+.auth-con {
+    background-color: rgb(46, 52, 59);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-con h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.auth-con p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #dcdcdc;
+}
+
+/* Form Inputs */
+.username input, .password input {
     width: 100%;
-    max-width: 500px;
-    box-sizing: border-box;
-}
-
-.register-form h2 {
-    margin-bottom: 0.75rem;
-    font-size: 2rem;
-    color: #1a1a1a;
-}
-
-.register-form p {
-    margin-bottom: 2rem;
-    color: #4e4e4e;
+    padding: 10px 14px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: #2f353d;
+    color: #fff;
     font-size: 1rem;
 }
 
-.register-field {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+/* Labels */
+label {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    text-align: left;
+    display: block;
 }
 
-.register-field label {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #333;
-}
-
-.register-field input {
-    width: 384px;
-    padding: 1rem;
-    border: 1.5px solid #cbd5e1;
-    border-radius: 10px;
-    font-size: 1.05rem;
-    transition: border-color 0.2s ease-in-out;
-}
-
-.register-field input:focus {
-    border-color: #4f46e5;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
-}
-
-input[type="text"], input[type="password"] {
+/* Button */
+.submit {
+    margin-top: 10px;
     width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-button[type="submit"] {
-    margin-top: 1rem;
-    width: 384px;
-    padding: 1rem;
+    padding: 12px;
     border: none;
-    border-radius: 10px;
-    background-color: #4f46e5;
+    border-radius: 8px;
+    background-color: #3b7ddd;
     color: white;
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #4338ca;
+    background-color: #2a62b8;
 }
 
-a {
-    color: #4f46e5;
-    text-decoration: none;
-    font-weight: 500;
-    text-decoration: underline
+/* Error Message */
+.error {
+    background-color: #ff4f4f;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
 }
 
-a:hover {
-    font-size: bold;
+.registerd {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #dcdcdc;
+}
+/* Registration Confirmation */
+.auth-con a {
+    color: #5aa9ff;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-con {
+        padding: 20px;
+    }
+
+    .auth-con h2 {
+        font-size: 1.4rem;
+    }
 }

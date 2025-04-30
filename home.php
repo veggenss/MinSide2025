@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,6 @@
   <!-- External CSS files for navigation and general styles -->
   <link rel="stylesheet" href="CSS/nav-bar.css" />
   <link rel="stylesheet" href="CSS/homeStyles.css" />
-
   <!-- Google Fonts: Poppins with various weights -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
     rel="stylesheet" />
@@ -57,22 +59,26 @@
     </div>
   </section>
 
-  <!-- Footer section for image credits -->
-  <footer>
-    <section class="credit">
-      <div class="credit-content">
-        <ul>
-          <li>
-            Image by
-            <span class="flatart-link">
-              <a href="https://www.freepik.com/author/flatart" target="_blank">flatart</a>
-            </span>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </footer>
+  <!--Comment Section-->
+  <section class="giscus-comments">
+    <div class="giscus-wrapper">
+      <script src="https://giscus.app/client.js"
+          data-repo="veggenss/MinSide2025"
+          data-repo-id="R_kgDOOh61YQ"
+          data-category="General"
+          data-category-id="DIC_kwDOOh61Yc4CppFL"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark_dimmed"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+      </script>
+    </div>
+  </section>
   <script src="Min_Side/JS/indexScript.js"></script>
 </body>
-
 </html>
