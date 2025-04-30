@@ -57,13 +57,25 @@ input[type="checkbox"] {
 
 
 /* Labels */
-label {
+label{
     font-size: 0.9rem;
     color: #e0e0e0;
     text-align: left;
     display: block;
 }
 
+.registerReminder{
+    font-size: 1rem;
+}
+a{
+    color: skyblue;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
 /* Submit Button */
 .submit{
     margin-top: 10px;

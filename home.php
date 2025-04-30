@@ -1,5 +1,11 @@
 <?php
-session_start();
+  include("dbh.inc.php");
+  include("include/navBar.html");
+  session_start();
+  if(empty($_SESSION["activeSes"])){
+    header("location: login.php");
+    exit();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +25,7 @@ session_start();
 
 <body>
   <!-- Navigation bar with dropdown menus -->
-  <nav>
+  <!--<nav>
     <ul>
       <li><a href="home.html">Hjem</a></li>
       <li><a href="Subpages/Prosjekter.html">Prosjekter</a></li>
@@ -43,8 +49,9 @@ session_start();
           </li>
         </ul>
       </li>
+      <li><a href="profile.php">Profil</a></li>
     </ul>
-  </nav>
+  </nav>-->
 
   <!-- Header section with introduction -->
   <section class="head">

@@ -4,6 +4,7 @@ session_start();
 
 
 $error = null;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $conn->real_escape_string($_POST['username']);
 
@@ -17,13 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // verifiser brukernavn og passord og lager session hvis de er riktig
     if ($user && password_verify($_POST['password'], $user['password'])) {
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['password'] = $_POST['password'];
+        $error = "Login Sucessfull";
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['activeSes'] = true;
         header('Location: home.php');
         exit();
         }
-        else {
-            $error = "Ugyldig brukernavn eller passord";
+    else {
+        $error = "Ugyldig brukernavn eller passord";
     } 
        
 }
@@ -43,8 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="auth-con">
 
-        <h2>Logg in</h2><br>
-        <p>Du må logge inn for å bruke denne nettsiden</p><br>   
+        <h2>Logg Inn</h2>
+        <p>Du må logge inn for å bruke denne nettsiden</p> 
 
         <?php if (isset($error)):?>
             <div class="error"><?php echo "{$error}<br>"; ?></div>
@@ -64,7 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <label for="remember_me"><input type="checkbox" id="remember_me" name="remember_me">Husk meg</label>
 
-                <button type="submit" value="Login" class="submit">Logg Inn</button><br>
+                <button type="submit" value="Login" class="submit">Logg Inn</button><br> <br> <br>    
+
+                <label class="registerReminder">Registrer deg <a href="register.php">her</a> hvis du ikke har bruker</label>
         </form>
     </div>
 

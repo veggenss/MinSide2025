@@ -72,7 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit" value="Register" class="submit">Registrer deg</button><br>
                 <?php if ($registerd):?>
                     <div class="registerd">Du er nå registrert! <br> Trykk <a href='login.php'>her</a> for å logge in</div>
-                <?php endif; ?>
+                <?php endif; ?> <br>
+
+                <label class="loginReminder">Log inn <a href="login.php">her</a> hvis du har bruker</label>
                 
         </form>
     </div>
