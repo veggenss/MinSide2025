@@ -8,16 +8,12 @@
 
 /* Base body styling with full viewport height */
 body{
-    min-height: 100vh;
     position: relative;
+    overflow: auto;
     background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 40%, #1e2838 70%, #1e2d4a 100%);
-    overflow: hidden; /* Prevents scrolling */
     font-family: Poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
 }
-
-/* Background image setup with flip effect */
-
 
 /* Main content container */
 .container{
