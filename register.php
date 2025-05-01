@@ -1,5 +1,5 @@
 <?php
-include("dbh.inc.php");
+include("include/dbh.inc.php");
 
 
 $registerd = null;
