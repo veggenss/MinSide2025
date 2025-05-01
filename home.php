@@ -15,9 +15,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Viggo's Nettside</title>
-
-  <!-- External CSS files for navigation and general styles -->
-  <link rel="stylesheet" href="CSS/nav-bar.css" />
   <link rel="stylesheet" href="CSS/homeStyles.css" />
   <!-- Google Fonts: Poppins with various weights -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
@@ -25,35 +22,6 @@
 </head>
 
 <body>
-  <!-- Navigation bar with dropdown menus -->
-  <!--<nav>
-    <ul>
-      <li><a href="home.html">Hjem</a></li>
-      <li><a href="Subpages/Prosjekter.html">Prosjekter</a></li>
-      <li><a href="Subpages/Om Meg.html">Om</a></li>
-      <li><a href="Subpages/JavaScript_feat_Bent.html">JavaScript</a></li>
-      <li><a href="Subpages/log.html">Logg</a></li>
-      <li>
-        <a href="#">Ressurser/Hjelp</a>
-        <ul class="dropdown">
-          <li>
-            <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a>
-          </li>
-          <li>
-            <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">freeCodeCamp</a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/@coding2go" target="_blank">Coding2Go</a>
-          </li>
-          <li>
-            <a href="Subpages/bent.html" target="_blank">Bent</a>
-          </li>
-        </ul>
-      </li>
-      <li><a href="profile.php">Profil</a></li>
-    </ul>
-  </nav>-->
-
   <!-- Header section with introduction -->
   <section class="head">
     <div class="container">
