@@ -2,7 +2,7 @@
 include("dbh.inc.php");
 session_start();
 
-$error = null;
+$message = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $conn->real_escape_string($_POST['username']);
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // verifiser brukernavn og passord og lager session hvis de er riktig
     if ($user && password_verify($_POST['password'], $user['password'])) {
-        $error = "Login Sucessfull";
+        $message = "Login Sucessfull";
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['activeSes'] = true;
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
         }
     else {
-        $error = "Ugyldig brukernavn eller passord";
+        $message = "Ugyldig brukernavn eller passord";
     } 
        
 }
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>Du må logge inn for å bruke denne nettsiden</p> 
 
         <?php if (isset($error)):?>
-            <div class="error"><?php echo "{$error}<br>"; ?></div>
+            <div class="error"><?php echo "{$message}<br>"; ?></div>
         <?php endif; ?>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form">
