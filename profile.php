@@ -7,6 +7,7 @@
     exit();
   }
 
+  $message = null;
 if (isset($_POST['new_username'])) {
   
   $new_username = $conn->real_escape_string($_POST['new_username']);
@@ -38,6 +39,8 @@ if (isset($_POST['new_username'])) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="CSS/profileStyles.css">
+  <script src="JS/profileScript.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil</title>
 </head>
@@ -56,8 +59,9 @@ if (isset($_POST['new_username'])) {
       
     </form>
 
-    <div class="logout">
-      <button><a href="logout.php">Logg ut</a></button>
+    <div class="path">
+      <button class="return"><a href="home.php">Tilbake</a></button>
+      <button class="logout" onclick="clicked(event)"><a href="logout.php">Logg ut</a></button>
     </div>
   </div>
 </body>
