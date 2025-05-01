@@ -9,7 +9,7 @@
 /* Main body styling with dark gradient background */
 body{
     min-height: 100vh; /* Ensures minimum full viewport height */
-    background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 40%, #1e2838 70%, #1e2d4a 100%);
+    background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 10%, #1e2838 20%, #1e2d4a 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,8 +44,9 @@ html{
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     margin: 20px auto;
-    background-color: rgb(46, 52, 59);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: rgba(46, 52, 59, 0.3);
+    backdrop-filter: blur(8px);
 }
 
 /* Image styling within about container */
