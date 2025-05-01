@@ -70,6 +70,7 @@ body {
 
 /* Individual log entry card styling */
 .log {
+    position: relative;
     background-color: #2e343b;
     padding: 30px;
     border-radius: 10px;
@@ -80,6 +81,7 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     background: rgba(46, 52, 59, 0.7);
     backdrop-filter: blur(8px);
+    z-index: -1;
 }
 
 /* Subtitle styling within log entries */

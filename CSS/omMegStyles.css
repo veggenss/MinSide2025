@@ -37,6 +37,7 @@ html{
 
 /* About content container styling */
 .about-con{
+    position: relative;
     display: flex;
     width: 90%;
     max-width: 1200px; /* Limits maximum width for larger screens */
@@ -47,6 +48,7 @@ html{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     background: rgba(46, 52, 59, 0.3);
     backdrop-filter: blur(8px);
+    z-index: -1;
 }
 
 /* Image styling within about container */
