@@ -16,85 +16,53 @@
     <link rel="stylesheet" href="../CSS/logStyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="">
-    <script src="../JS/log.js" defer></script>
+    <script src="/VG12025Nettside/JS/log.js" defer></script>
 </head>
 <body>
-
+    
     <!-- Search Bar -->
     <header class="search-bar">
         <div class="search-container">
             <input type="text" id="search" placeholder="Skriv i Søkefelte..."> 
-            <div class="dropdown-filter">
-                <select class="monthFilterSelect">
-                    <option value="all">Alle</option>
-                    <option value="january">Januar</option>
-                    <option value="febuary">Februar</option>
-                    <option value="march">Mars</option>
-                    <option value="april">April</option>
-                    <option value="may">Mai</option>
-                    <option value="june">Juni</option>
-                    <option value="july">Juli</option>
-                    <option value="august">August</option>
-                    <option value="september">September</option>
-                    <option value="october">Oktober</option>
-                    <option value="november">November</option>
-                    <option value="december">Desember</option>
-                </select>
-            </div>
-            <div class="dropdown-filter">
-                <select class="dayFilterSelect">
-                    <option value="all">Alle</option>
-                    <option value="monday">Mandag</option>
-                    <option value="tuesday">Tirsdag</option>
-                    <option value="wednesday">Onsdag</option>
-                    <option value="thursday">Torsdag</option>
-                    <option value="friday">Fredag</option>
-                    <option value="saturday">Lørdag</option>
-                    <option value="sunday">Søndag</option>
-                </select>
-            </div>
-        </div>
     </header>
 
     <!-- Log Section -->
     <section class="logs" id="logSection">
-        <div class="log january monday">
+        <div class="log">
             <h3>Theme, Spill og animasjoner</h3>
             <h6>Mandag - 06/01/2025</h6>
             <p>Gjorde theme til JavaScript Underside det same som Om og Logg. La også til små animasjoner i Prosjekter for ekstra responsivitet. Etter det la jeg til Stein saks papir spill i JavaScript og er ganske fornøyd med UIen</p>
         </div>
 
-        <div class="log december wednesday">
+        <div class="log">
             <h3>Side Vurdering og diverse</h3>
             <h6>Onsdag - 18/12/2024</h6>
             <p>Vurderte med-elev sinn side.</p>
         </div>
 
-        <div class="log december wednesday">
+        <div class="log">
             <h3>Stiler</h3>
             <h6>Onsdag - 11/12/2024</h6>
             <p>Diverse styling på log siden</p>
         </div>
 
-        <div class="log december monday">
+        <div class="log">
             <h3>Filtere</h3>
             <h6>Mandag - 09/12/2024</h6>
             <p>La til måndes filter ved siden av søkefeltet og det funker veldig bra. Den søker etter ID på elementene som sier hvilken måned de er.</p>
         </div>
 
-        <div class="log december friday">
+        <div class="log">
             <h3>Oppretting av logg</h3>
             <h6>Fredag - 06/12/2024</h6>
             <p>Er ganske seint ute men fikk endelig lagd logg. Endret bakgrunn på "Om" Siden til å være den samme som på "Prosjekter". Lagde disse log konteinerene og et søkefelt som faktisk funker og er live. Det funket ikke helt til å begynne med fordi JS filen bare ble ikke tilkoblet riktig men jeg flytet script scr="" fra bunnen av body til head og da fungerte det.</p>
         </div>
 
-        <div class="log april wednesday">
+        <div class="log">
             <h3>Intergrerte nettside med PHP bruker inlogging</h3>
             <h6>Wednesday 30/04/2025</h6>
             <p>Etter å ha opprettet database og brukt php for kommunikasjon har jeg reintegrert nettsiden med dette systemet. Alt er på en ny repo siden jeg kjører databasen med XAMPP og da må den være i en annen fil en den var før.</p>
         </div>
     </section>
-
-
 </body>
 </html>
