@@ -8,7 +8,7 @@
   }
 
   $message = null;
-if (isset($_POST['new_username'])) {
+  if (isset($_POST['new_username'])) {
   
   $new_username = $conn->real_escape_string($_POST['new_username']);
 
@@ -33,7 +33,7 @@ if (isset($_POST['new_username'])) {
           $message = "Kunne ikke oppdatere brukernavn :(";
       }
   }
-}
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">

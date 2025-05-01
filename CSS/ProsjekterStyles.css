@@ -125,46 +125,7 @@ body {
     border: 2px solid white;
     border-radius: 4px;
     transition: filter 0.5s ease;
-    filter: blur(2px);
 }
-
-.picture :hover {
-    filter: blur(0px);
-}
-
-
-.outline-section {
-    display: flex;
-    justify-content: center;
-    margin: 70px;
-    margin-bottom: 100px;
-}
-
-.outline-box {
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.058);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.09);
-    backdrop-filter: blur(8px);
-    width: 80%;
-    max-width: 1000px;
-    border-radius: 15px;
-    padding: 30px;
-}
-
-.outline-content {
-    color: white;
-    text-align: center;
-}
-
-.outline-image img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border: 2px solid white;
-    border-radius: 5px;
-}
-
 @media only screen and (max-width: 1400px) {
     .Prosjekt-Top,
     .Prosjekt-Bottom {

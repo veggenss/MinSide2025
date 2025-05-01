@@ -33,7 +33,7 @@
     <div class="Project-box">
         <div class="Project-content">
             <div class="picture">
-                <a href="../home.php" target="_blank"><img src="../pictures/Min Side SS.png" alt="Screenshot of Website"></a>
+                <a href="../home.php" target="_blank"><img src="../pictures/minSideBilde.png" alt="Screenshot of Website"></a>
             </div>  
             <h1>Min Side</h1>
             <p>Siden du er på nå! Det er prosjektet vi jobber med i Konseptutvikling og Programmering med Bent</p>
@@ -54,7 +54,7 @@
     <!-- Project 3: Photo Series -->
     <div class="Project-box">
         <div class="Project-content">
-            <a href="FotoSerie.php"><img src="../picture/Fotoserie/IMG_1068.jpg" alt="Screenshot of Website"></a>
+            <a href="FotoSerie.php"><img src="/VG12025Nettside/pictures/Fotoserie/IMG_1068.jpg" alt="Screenshot of Website"></a>
             <h1>Foto Serie</h1>
             <p>Oppgave jeg hadde i historiefortelling</p>
         </div>
