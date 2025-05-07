@@ -75,7 +75,7 @@
 
     <div class="Project-box">
         <div class="Project-content">
-            <a href="https://github.com/veggenss/Teknologiforst-elseNovel"><img src="../pictures/interaktivHistoriePicture.png" alt="InteraktivHistorieBilde" target="_blank"></a>
+            <a href="https://github.com/veggenss/Teknologiforst-elseNovel" target="_blank"><img src="../pictures/interaktivHistoriePicture.png" alt="InteraktivHistorieBilde"></a>
             <h1>Interaktive historie</h1>
             <p>Oppgave i teknologiforsåelsen hvor man skulle lage et spill med historie og valg som forandrer på historien. Brukte Renpy for å kode det</p>
         </div>

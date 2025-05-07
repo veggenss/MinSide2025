@@ -15,6 +15,7 @@ body{
     background-position: center;
     color: white;
     line-height: 1.6; /* Improves text readability */
+    overflow-x: hidden;
 }
 
 /* Base typography settings */

@@ -10,6 +10,7 @@ body{
     min-height: 100vh;
     background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 10%, #1e2838 20%, #1e2d4a 100%);
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 

@@ -10,6 +10,7 @@ body {
     background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 10%, #1e2838 20%, #1e2d4a 100%);
     font-family: 'Poppins', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .container {
@@ -17,6 +18,7 @@ body {
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
+    z-index: -1;
     width: 80%;
     max-width: 1000px;
     padding: 40px 30px;

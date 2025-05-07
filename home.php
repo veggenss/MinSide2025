@@ -7,31 +7,55 @@
     header("location: login.php");
     exit();
   }
+
+  $sql = "SELECT username, register_date FROM users";
+  $result = $conn->query($sql); 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viggo's Nettside</title>
-  <link rel="stylesheet" href="CSS/homeStyles.css" />
-  <!-- Google Fonts: Poppins with various weights -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viggo Nettside</title>
+  <link rel="stylesheet" href="CSS/homeStyles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"/>
 </head>
 
 <body>
-  <!-- Header section with introduction -->
+
   <section class="head">
     <div class="container">
       <div class="head-content">
         <p>Viggo Weissmuller</p>
-        <h1>
-          Her finner du info om meg <br />
-          og hva jeg har jobbet med
-        </h1>
+        <h1>Her finner du info om meg<br/> og hva jeg har jobbet med</h1>
       </div>
+    </div>
+  </section>
+  <section class="user-section">
+    <h2 class="user-list-title">Liste med brukere</h3><br>
+    <div class="list-line"></div>
+    <div class="User-list">
+    
+      <ul>
+          <?php
+          if ($result->num_rows > 0) {
+
+              while($row = $result->fetch_assoc()) {
+
+                $row['register_date'] = preg_replace('/\.\d{6}$/', '', $row['register_date']);
+                
+                echo "<li>" . "<!--<span id='usnam'>Brukernavn: </span>-->" . htmlspecialchars($row["username"]) . "<span id='regi'>" . "Registrert: " . htmlspecialchars($row["register_date"]) . "</span></li>";
+              }
+          } 
+          else {
+            echo "<li>No users found</li>";
+          }
+          $conn->close();
+          ?>
+      </ul>
     </div>
   </section>
 
@@ -55,6 +79,5 @@
       </script>
     </div>
   </section>
-  <script src="Min_Side/JS/indexScript.js"></script>
 </body>
 </html>

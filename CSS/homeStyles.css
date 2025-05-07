@@ -9,7 +9,7 @@
 /* Base body styling with full viewport height */
 body{
     position: relative;
-    overflow: auto;
+    overflow-x: hidden;
     background: linear-gradient(135deg, rgb(30, 35, 42) 0%, #1e232a 10%, #1e2838 20%, #1e2d4a 100%);
     font-family: Poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
@@ -69,34 +69,60 @@ body{
     width: 70%;
     box-sizing: border-box;
 }
-/* Dropdown menu styling */
-nav ul li .dropdown{
-    display: none; /* Hidden by default */
-    position: absolute;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 0;
-    backdrop-filter: blur(4px); /* Glassmorphism effect */
+.user-section{
+  margin-top: 220px;
 }
 
-/* Show dropdown on hover */
-nav ul li:hover .dropdown{
-    display: block;
+.User-list {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
-/* Dropdown list items */
-nav ul li .dropdown li{
-    padding: 3px 3px;
-    white-space: nowrap; /* Prevents text wrapping */
+.User-list ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove left padding */
+  margin: 0; /* Remove any default margins */
 }
 
-/* Dropdown links */
-nav ul li .dropdown li a{
-    color: white;
-    text-decoration: none;
+.User-list ul li {
+  background-color: #2a2e3d; /* Dark background color for each item */
+  color: white; /* White text */
+  padding: 12px 16px;
+  margin-bottom: 8px; /* Space between list items */
+  border-radius: 6px; /* Rounded corners for list items */
+  font-size: 1.2rem; /* Slightly larger text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.User-list ul li #regi {
+  font-size: 1rem;
+  color: #99aabb; /* Lighter color for the registration date */
+}
+.user-list-title{
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 0;
+}
+.list-line{
+  display: flex;
+  justify-content: center;
+  margin-left: 30%;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 40%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
 
 /* Tablet responsiveness */
 @media screen and (max-width: 768px) {
