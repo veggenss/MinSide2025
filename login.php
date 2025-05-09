@@ -42,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-
     <div class="auth-con">
 
         <h2>Logg Inn</h2>
@@ -53,22 +52,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form">
+            <div class="username">
+                <label>Brukernavn</label><br>
+                <input type="text" placeholder="username" name="username" required>
+            </div>
 
-                <div class="username">
-                    <label>Brukernavn</label><br>
-                    <input type="text" placeholder="username" name="username" required>
-                </div>
+            <div class="password">
+                <label>Passord</label><br>
+                <input type="password" placeholder="password" name="password" required>
+            </div>
 
-                <div class="password">
-                    <label>Passord</label><br>
-                    <input type="password" placeholder="password" name="password" required>
-                </div>
+            <label for="remember_me"><input type="checkbox" id="remember_me" name="remember_me">Husk meg</label>
 
-                <label for="remember_me"><input type="checkbox" id="remember_me" name="remember_me">Husk meg</label>
+            <button type="submit" value="Login" class="submit">Logg Inn</button><br> <br> <br>    
 
-                <button type="submit" value="Login" class="submit">Logg Inn</button><br> <br> <br>    
-
-                <label class="registerReminder">Registrer deg <a href="register.php">her</a> hvis du ikke har bruker</label>
+            <label class="registerReminder">Registrer deg <a href="register.php">her</a> hvis du ikke har bruker</label>
         </form>
     </div>
 

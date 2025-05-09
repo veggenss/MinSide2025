@@ -45,13 +45,13 @@
 
               while($row = $result->fetch_assoc()) {
 
-                $row['register_date'] = preg_replace('/\.\d{6}$/', '', $row['register_date']);
+                $row['register_date'] = preg_replace(['/\.\d{6}$/', '/\ \d{1}/', '/^/'], ['', ' Klokken: ', 'Dato: '], $row['register_date']);
                 
-                echo "<li>" . "<!--<span id='usnam'>Brukernavn: </span>-->" . htmlspecialchars($row["username"]) . "<span id='regi'>" . "Registrert: " . htmlspecialchars($row["register_date"]) . "</span></li>";
+                echo "<li>" . "<!--<span id='usnam'>Brukernavn: </span>-->" . htmlspecialchars($row["username"]) . "<span id='regi'>" . htmlspecialchars($row["register_date"]) . "</span></li>";
               }
           } 
           else {
-            echo "<li>No users found</li>";
+            echo "<li>Ingen brukere...</li>";
           }
           $conn->close();
           ?>
