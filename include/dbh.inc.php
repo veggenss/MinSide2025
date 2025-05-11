@@ -1,5 +1,4 @@
 <?php
-
     $db_server = "localhost";
     $db_user = "root";
     $db_pass = "";
@@ -11,7 +10,6 @@
         $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
     }
     catch(mysqli_sql_exception){
-        $error001 = true;
+        echo "Kunne ikke koble til Database :(";
     }
-
 ?>

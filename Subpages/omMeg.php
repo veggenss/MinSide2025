@@ -2,6 +2,7 @@
   include("../include/dbh.inc.php");
   include("../include/navBar.html");
   session_start();
+  
   if(empty($_SESSION["activeSes"])){
     header("location: login.php");
     exit();

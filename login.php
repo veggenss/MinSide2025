@@ -7,7 +7,7 @@ $message = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $conn->real_escape_string($_POST['username']);
 
-    // sjekker brukernavn og passord opp mot databasen
+    //checks if the username and password are in the db
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    // verifiser brukernavn og passord og lager session hvis de er riktig
+    //Verifies username and password then logs in
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $message = "Login Sucessfull";
         $_SESSION['user_id'] = $user['id'];

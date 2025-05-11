@@ -9,7 +9,7 @@
   }
 
   $sql = "SELECT username, register_date FROM users";
-  $result = $conn->query($sql); 
+  $result = $conn->query($sql);
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
   <section class="head">
     <div class="container">
       <div class="head-content">
@@ -45,11 +44,11 @@
 
               while($row = $result->fetch_assoc()) {
 
-                $row['register_date'] = preg_replace(['/\.\d{6}$/', '/\ \d{1}/', '/^/'], ['', ' Klokken: ', 'Dato: '], $row['register_date']);
+                $row['register_date'] = preg_replace(['/\.\d{6}$/', '/\ /', '/^/'], ['', ' Klokken: ', 'Dato: '], $row['register_date']);
                 
                 echo "<li>" . "<!--<span id='usnam'>Brukernavn: </span>-->" . htmlspecialchars($row["username"]) . "<span id='regi'>" . htmlspecialchars($row["register_date"]) . "</span></li>";
               }
-          } 
+          }
           else {
             echo "<li>Ingen brukere...</li>";
           }

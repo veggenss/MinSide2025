@@ -9,7 +9,7 @@
 
   $message = null;
 
-  //Nytt Brukernavn
+  //New username
   if (isset($_POST['new_username'])) {
     if(!preg_match('/^.{4,}$/',$_POST['new_username'])){
       $message = "Brukernavn må være lengre en 3 siffer";
@@ -27,7 +27,7 @@
         $message = "Brukernavnet finnes allerede, prøv et annet.";
       } 
       else {
-        // oppdater brukernavnet i databasen
+        //Update username in db
         $sql = "UPDATE users SET username = ? WHERE id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("si", $new_username, $_SESSION['user_id']);
@@ -43,7 +43,7 @@
     }
   }
 
-  //Bruker Sletting
+  //User Deletion
   if (isset($_POST['delete_user'])){
     $user_id = $_SESSION['user_id'];
 
