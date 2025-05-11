@@ -89,8 +89,8 @@
     <h3 class="lineText">Andre</h3>
     <div class="line"></div>
     <div class="path">
-      <button class="return"><a href="home.php">Tilbake</a></button>
-      <button class="logOut" onclick="return confirm('Er du sikker på at du vil logge ut?')"><a href="logout.php">Logg ut</a></button>
+      <a href="home.php" class="return">Tilbake</a>
+      <a href="logout.php" class="logOut" onclick="return confirm('Er du sikker på at du vil logge ut?')">Logg ut</a>
     </div>
   </div>
 </body>

@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else{
         $error = "Passord skal ha minst 1 tegn og tall";
     }*/
+    //Starts the long username and password verification proccess
     if(!preg_match('/^.{4,}$/', $_POST['username'])){
         $error = "Brukernvnet må være minst 4 siffer";
     }
@@ -20,8 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(!preg_match('/^.{5,}$/', $_POST['password'])){
             $error = "Passordet må være minst 5 siffer";
         }
-        elseif(!preg_match('/[a-zA-Z][0-9]/', $_POST['password'])){
+        elseif(!preg_match('/(?=.*\w)(?=.*\d)/', $_POST['password'])){
             $error = "Passordet må ha minst 1 tegn og 1 tall";
+        }
+        elseif(preg_match('/[ ]/', $_POST['password'])){
+            $error = "Passordet kan ikke ha mellomrom";
         }
         else{
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);

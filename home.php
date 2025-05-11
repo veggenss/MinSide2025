@@ -33,6 +33,11 @@
       </div>
     </div>
   </section>
+
+  <section class="welcome">
+    <h1>Velkommen <?php echo $_SESSION['username'];?></h1>
+  </section>
+  <!--User list-->
   <section class="user-section">
     <h2 class="user-list-title">Liste med brukere</h3><br>
     <div class="list-line"></div>
@@ -41,18 +46,15 @@
       <ul>
           <?php
           if ($result->num_rows > 0) {
-
               while($row = $result->fetch_assoc()) {
-
                 $row['register_date'] = preg_replace(['/\.\d{6}$/', '/\ /', '/^/'], ['', ' Klokken: ', 'Dato: '], $row['register_date']);
-                
+
                 echo "<li>" . "<!--<span id='usnam'>Brukernavn: </span>-->" . htmlspecialchars($row["username"]) . "<span id='regi'>" . htmlspecialchars($row["register_date"]) . "</span></li>";
               }
           }
           else {
-            echo "<li>Ingen brukere...</li>";
+            echo "<li>Ingen registrerte brukere...</li>";
           }
-          $conn->close();
           ?>
       </ul>
     </div>

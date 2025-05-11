@@ -48,31 +48,31 @@ form {
   }
   
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
+  margin-bottom: 20px;
+  text-align: left;
+}
   
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
   
 input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1rem;
-    transition: 0.3s ease;
-  }
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
   
 input[type="text"]:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.15);
-  }
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
   
 .lineText{
   display: flex;
@@ -82,28 +82,27 @@ input[type="text"]:focus {
 }
 .line{
   border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 100%;
-  
+  width: 100%; 
 }
 .path {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 
-  }
+}
   
-.path button {
-    color: #1e232a;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    width: 45%;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
+.path a {
+  color: #1e232a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  width: 45%;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
 
 .return{
-    background-color: rgb(71, 250, 253)
+  background-color: rgb(71, 250, 253)
 }
 
 .return:hover{
@@ -117,7 +116,7 @@ input[type="text"]:focus {
     background-color: rgb(220, 20, 60);
   }
   
-.path button a {
+.path a {
     text-decoration: none;
     color: inherit;
     font-weight: 500;
