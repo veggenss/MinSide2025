@@ -1,12 +1,3 @@
-<?php
-  include("../include/dbh.inc.php");
-  include("../include/navBar.html");
-  session_start();
-  if(empty($_SESSION["activeSes"])){
-    header("location: login.php");
-    exit();
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +25,7 @@
         <div class="Project-content">
             <div class="picture">
                 <a href="../home.php" target="_blank"><img src="../pictures/minSideBilde.png" alt="Screenshot of Website"></a>
-            </div>  
+            </div>
             <h1>Min Side</h1>
             <p>Siden du er på nå! Det er prosjektet vi jobber med i Konseptutvikling og Programmering. Den har vi jobbet med masse utover skoleåret</p>
         </div>
@@ -45,7 +36,7 @@
         <div class="Project-content">
             <div class="picture">
                 <a href="../Engelsk Nettside/index.html" target="_blank"><img src="../pictures/Engelsk_Bilde.png" alt="Screenshot of Website"></a>
-            </div>     
+            </div>
             <h1>English Tourist Site</h1>
             <p>Del av Engelsk oppgave vi fikk. Det er en Turist nettside om California. Masse ting som prøver å få deg til å dra ditt. Siden ble ganske bra, men ikke karakteren</p>
         </div>
